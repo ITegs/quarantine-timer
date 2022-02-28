@@ -12,7 +12,7 @@ export default function Countdown() {
 
   useEffect(() => {
     calcTime();
-  }, []);
+  });
 
   const calcTime = () => {
     const now = new Date();
@@ -40,7 +40,7 @@ export default function Countdown() {
 
   return (
     <div>
-      {days == 0 && hours == 0 && minutes == 0 && seconds == 0 ? (
+      {days === 0 && hours === 0 && minutes === 0 && seconds === 0 ? (
         <h1 style={styles.finished}>
           Herzlichen Glückwunsch du musst nicht mehr in Quarantäne!
         </h1>
