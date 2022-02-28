@@ -6,7 +6,7 @@ export default function Greetings() {
   return (
     <div style={styles.container}>
       <h1 style={styles.text}>
-        {queryMessage == "default"
+        {queryMessage === "default"
           ? "Wir freuen uns dann wieder etwas mit Dir zu machen!"
           : queryMessage}
       </h1>
