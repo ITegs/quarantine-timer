@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/quarantine-timer/static/css/main.3ad552fa.css",
-    "main.js": "/quarantine-timer/static/js/main.e8f64b27.js",
+    "main.js": "/quarantine-timer/static/js/main.5bae1234.js",
     "index.html": "/quarantine-timer/index.html",
     "main.3ad552fa.css.map": "/quarantine-timer/static/css/main.3ad552fa.css.map",
-    "main.e8f64b27.js.map": "/quarantine-timer/static/js/main.e8f64b27.js.map"
+    "main.5bae1234.js.map": "/quarantine-timer/static/js/main.5bae1234.js.map"
   },
   "entrypoints": [
     "static/css/main.3ad552fa.css",
-    "static/js/main.e8f64b27.js"
+    "static/js/main.5bae1234.js"
   ]
 }
