@@ -18,7 +18,7 @@ const styles = {
   },
   title: {
     color: Colors.text,
-    fontSize: "1.8em",
+    fontSize: "1.6em",
     fontWeight: "bold",
 
     padding: "0.4em",

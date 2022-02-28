@@ -1,12 +1,14 @@
 import React from "react";
 import { Colors } from "../Theme/Colors";
-import { querySender } from "./parameters";
+import { querySender, queryMessage } from "./parameters";
 
 export default function Greetings() {
   return (
     <div style={styles.container}>
       <h1 style={styles.text}>
-        Wir freuen uns dann wieder etwas mit Dir zu machen!
+        {queryMessage == "default"
+          ? "Wir freuen uns dann wieder etwas mit Dir zu machen!"
+          : queryMessage}
       </h1>
       {querySender != null ? (
         <h1 style={styles.greet}>Dein {querySender}.</h1>
