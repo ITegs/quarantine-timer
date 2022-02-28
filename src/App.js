@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Countdown from "./components/Countdown.js";
+import Header from "./components/Header.js";
+import { Colors } from "./Theme/Colors";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={styles.container}>
+      <Header />
+      <div style={styles.countdown}>
+        <Countdown />
+      </div>
     </div>
   );
 }
 
-export default App;
+const styles = {
+  container: {
+    backgroundColor: Colors.background,
+    minHeight: "100vh",
+  },
+  countdown: {
+    paddingTop: "10vh",
+  },
+};
