@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import { Colors } from "../Theme/Colors";
+import { queryDate } from "./parameters";
 
 export default function Countdown() {
-  const queryParams = new URLSearchParams(window.location.search);
-  const date = new Date(queryParams.get("date"));
+  const date = new Date(queryDate);
 
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
+
+  const [isRunning, setIsRunning] = useState(true);
 
   useEffect(() => {
     calcTime();
@@ -21,6 +23,7 @@ export default function Countdown() {
 
     // if the time difference is negative, the countdown is over
     if (diff < 0) {
+      setIsRunning(false);
       return;
     }
     // calculate the days, hours, minutes and seconds
@@ -29,6 +32,7 @@ export default function Countdown() {
     const m = Math.floor(diff / (1000 * 60)) % 60;
     const s = Math.floor(diff / 1000) % 60;
 
+    // set the state with the new values
     setDays(d);
     setHours(h);
     setMinutes(m);
@@ -40,7 +44,7 @@ export default function Countdown() {
 
   return (
     <div>
-      {days === 0 && hours === 0 && minutes === 0 && seconds === 0 ? (
+      {!isRunning ? (
         <h1 style={styles.finished}>
           Herzlichen Glückwunsch du musst nicht mehr in Quarantäne!
         </h1>
