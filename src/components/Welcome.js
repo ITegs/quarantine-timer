@@ -15,6 +15,6 @@ const styles = {
     color: Colors.accent1,
     fontSize: "2em",
     paddingLeft: "10vw",
-    marginTop: "6vh",
+    marginTop: "4vh",
   },
 };

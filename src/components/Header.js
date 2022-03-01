@@ -14,10 +14,10 @@ export default function Header() {
 
 const styles = {
   container: {
-    backgroundColor: Colors.dark,
+    backgroundColor: Colors.accent2,
   },
   title: {
-    color: Colors.text,
+    color: Colors.background,
     fontSize: "1.6em",
     fontWeight: "bold",
 

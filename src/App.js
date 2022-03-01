@@ -33,6 +33,6 @@ const styles = {
     minHeight: "100vh",
   },
   countdown: {
-    paddingTop: "7vh",
+    paddingTop: "5vh",
   },
 };
